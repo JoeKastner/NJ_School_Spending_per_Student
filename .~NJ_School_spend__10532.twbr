@@ -1,0 +1,3002 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.19.1010.1202                               -->
+<workbook source-build='2019.4.0 (20194.19.1010.1202)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='NJ_spending_per_pupil' inline='true' name='federated.0tw0wx21ju081u13eswq101rhr2r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='NJ_spending_per_pupil' name='textscan.08kvxzo0nkuu501ca54xh1i3zyr0'>
+            <connection class='textscan' directory='/Users/joe/OneDrive/Data_Science/Repos/NJ_School_Spending_per_Student' filename='NJ_spending_per_pupil.csv' password='' port='0' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.08kvxzo0nkuu501ca54xh1i3zyr0' name='NJ_spending_per_pupil.csv' table='[NJ_spending_per_pupil#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='County' ordinal='0' />
+            <column datatype='string' name='District' ordinal='1' />
+            <column datatype='string' name='Budget Type/Operating Group' ordinal='2' />
+            <column datatype='string' name='Concat' ordinal='3' />
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='4' />
+            <column datatype='integer' name='Total Spend' ordinal='5' />
+            <column datatype='integer' name='Avg Number Students' ordinal='6' />
+            <column datatype='integer' name='Avg Spend per Student' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>District</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[District]</local-name>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias>District</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Budget Type/Operating Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Budget Type/Operating Group]</local-name>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias>Budget Type/Operating Group</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Concat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Concat]</local-name>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias>Concat</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Spend</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Spend]</local-name>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias>Total Spend</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg Number Students</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Avg Number Students]</local-name>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias>Avg Number Students</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg Spend per Student</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Avg Spend per Student]</local-name>
+            <parent-name>[NJ_spending_per_pupil.csv]</parent-name>
+            <remote-alias>Avg Spend per Student</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='CountD' datatype='integer' name='[Avg Number Students]' role='measure' type='quantitative' />
+      <column aggregation='CountD' datatype='integer' name='[Avg Spend per Student]' role='measure' type='quantitative' />
+      <column aggregation='CountD' datatype='string' name='[Budget Type/Operating Group]' role='dimension' type='nominal' />
+      <column aggregation='None' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column datatype='string' name='[District]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Avg' datatype='integer' name='[Total Spend]' role='measure' type='quantitative' />
+      <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+      <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+      <column-instance column='[District]' derivation='None' name='[none:District:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Budget Type)' hidden='true' name='[Action (Budget Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Budget Type]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Budget Type,District)' hidden='true' name='[Action (Budget Type,District)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Budget Type]' />
+          <groupfilter function='level-members' level='[District]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (County)' hidden='true' name='[Action (County)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[County]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (County,District,YEAR(Year))' hidden='true' name='[Action (County,District,YEAR(Year))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[County]' />
+          <groupfilter function='level-members' level='[District]' />
+          <groupfilter function='level-members' level='[tyr:Year:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (County,YEAR(Year))' hidden='true' name='[Action (County,YEAR(Year))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[County]' />
+          <groupfilter function='level-members' level='[tyr:Year:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (District)' hidden='true' name='[Action (District)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[District]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (YEAR(Year))' hidden='true' name='[Action (YEAR(Year))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tyr:Year:ok]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/joe/OneDrive/Data_Science/Repos/NJ_School_Spending_per_Student/NJ_spending_per_pupil.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='12/15/2019 02:38:37 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='NJ_spending_per_pupil' increment-value='%null%' refresh-type='create' rows-inserted='5796' timestamp-start='2019-12-15 14:38:37.783' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>County</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[County]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>County</remote-alias>
+              <ordinal>0</ordinal>
+              <family>NJ_spending_per_pupil.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>District</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[District]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>District</remote-alias>
+              <ordinal>1</ordinal>
+              <family>NJ_spending_per_pupil.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>972</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Budget Type/Operating Group</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Budget Type/Operating Group]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Budget Type/Operating Group</remote-alias>
+              <ordinal>2</ordinal>
+              <family>NJ_spending_per_pupil.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Concat</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Concat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Concat</remote-alias>
+              <ordinal>3</ordinal>
+              <family>NJ_spending_per_pupil.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1043</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>4</ordinal>
+              <family>NJ_spending_per_pupil.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total Spend</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total Spend]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total Spend</remote-alias>
+              <ordinal>5</ordinal>
+              <family>NJ_spending_per_pupil.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4974</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg Number Students</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Avg Number Students]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg Number Students</remote-alias>
+              <ordinal>6</ordinal>
+              <family>NJ_spending_per_pupil.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>979</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg Spend per Student</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Avg Spend per Student]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg Spend per Student</remote-alias>
+              <ordinal>7</ordinal>
+              <family>NJ_spending_per_pupil.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2676</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.425987' measure-ordering='alphabetic' measure-percentage='0.574013' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:District:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;ASBURY PARK CITY&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;BERGEN COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;BRANCHBURG TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CAPE MAY CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;COLTS NECK TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;DUMONT BORO&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;ELK TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;FORT LEE BORO&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;GLOUCESTER CO SPEC SERV&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;HAMPTON TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;HILLSIDE TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;KEARNY TOWN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;LENAPE VALLEY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;LUMBERTON TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;MEDFORD TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;MONMOUTH REGIONAL&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;MULLICA TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;NORTH WILDWOOD CITY&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;OXFORD TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;PINE HILL BORO&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;RANDOLPH TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;ROSELLE BORO&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SHORE REGIONAL&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SPRINGFIELD TWP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;TRENTON CITY&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;WALLKILL VALLEY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;WEST NEW YORK TOWN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;WOODLAND PARK&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ABSECON CITY&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;BAYONNE CITY&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;BLOOMINGDALE BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;BUTLER BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CLAYTON BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;DELRAN TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;EASTERN CAMDEN COUNTY REG&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;FAIR LAWN BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;GARFIELD CITY&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;HADDON TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;HAZLET TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;HUNTERDON CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;LAKEWOOD TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;LOGAN TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MANVILLE BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MILFORD BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MORRIS SCHOOL DISTRICT&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;NORTH ARLINGTON BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;OCEAN GATE BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;PAULSBORO BORO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;PORT REPUBLIC CITY&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;RIVERSIDE TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SANDYSTON-WALPACK TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SOUTH ORANGE-MAPLEWOOD&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;TABERNACLE TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;VERNON TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;WEEHAWKEN TWP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;WINFIELD TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ALLOWAY TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;BELLMAWR BORO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;BOONTON TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CAMDEN CITY&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CLIFTON CITY&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DENVILLE TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;EDISON TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;FLEMINGTON-RARITAN REG&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;GLASSBORO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;HAMBURG BORO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;HIGHLAND PARK BORO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;JAMESBURG BORO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;LAWRENCE TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;LOPATCONG TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;MATAWAN-ABERDEEN REGIONAL&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;MILLVILLE CITY&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;MOUNT LAUREL TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;NORTH HALEDON BORO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;OLD BRIDGE TWP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;PENNSVILLE&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;RAHWAY CITY&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ROCKAWAY BORO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SEA GIRT BORO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SOUTHERN REGIONAL&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;THE BARACK OBAMA GREEN CHARTER HIGH SCHO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;W WINDSOR-PLAINSBORO REG&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;WEST ESSEX REGIONAL&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;WOODBRIDGE TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;ATLANTIC HIGHLANDS BORO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;BERLIN BORO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;BRIELLE BORO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CEDAR GROVE TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CRESSKILL BORO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;EAST BRUNSWICK TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;ENGLEWOOD CITY&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;FRANKLIN TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;GREATER EGG HARBOR REG&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;HARDYSTON TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;HOLMDEL TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;KINGWOOD TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;LINDENWOLD BORO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MAHWAH TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MERCER COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MONTGOMERY TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;NEPTUNE TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;NORTHFIELD CITY&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;PARK RIDGE BORO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;PITTSGROVE TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;RIDGEFIELD BORO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;RUMSON-FAIR HAVEN REG&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SOMERSET CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;STILLWATER TWP&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;UNION COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;WARREN HILLS REGIONAL&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;WESTVILLE BORO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;WYCKOFF TWP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ATLANTIC CITY&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;BERGENFIELD BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;BRICK TWP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CARLSTADT BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;COMMERCIAL TWP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;DUNELLEN BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ELMWOOD PARK&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;FRANKFORD TWP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;GLOUCESTER CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;HANOVER PARK REGIONAL&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;HO HO KUS BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;KENILWORTH BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;LEONIA BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;LYNDHURST TWP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;MENDHAM BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;MONROE TWP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;N HUNT/VOORHEES REGIONAL&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;NORTHERN BURLINGTON REG&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;PALISADES PARK&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;PINELANDS REGIONAL&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;READINGTON TWP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ROSELLE PARK BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SHREWSBURY BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;STAFFORD TWP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;TUCKERTON BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;WANAQUE BORO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;WEST ORANGE TOWN&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;WOODLAND TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ALPHA BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;BELMAR BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;BORDENTOWN REGIONAL&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CAMDEN COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CLINTON TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DEPTFORD TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;EGG HARBOR CITY&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;FLORENCE TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;GLEN RIDGE BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;HAMILTON TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;HIGHLANDS BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;JEFFERSON TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;LEBANON BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;LOWER ALLOWAYS CREEK&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;MAURICE RIVER TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;MINE HILL TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;MOUNT OLIVE TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;NORTH HANOVER TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;OLD TAPPAN BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;PEQUANNOCK TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;RAMAPO-INDIAN HILL REG&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ROCKAWAY TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SEASIDE HEIGHTS BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SPARTA TWP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;TINTON FALLS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;WALDWICK BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;WEST LONG BRANCH BORO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;WOODBURY CITY&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;BASS RIVER TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;BLAIRSTOWN TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;BURLINGTON CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CITY OF ORANGE TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;DELAWARE TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;EAST WINDSOR REGIONAL&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;EWING TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;FRENCHTOWN BORO&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;HACKETTSTOWN&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;HAWORTH BORO&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;HUDSON COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;LAKEHURST BORO&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;LIVINGSTON TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MANSFIELD TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MIDDLETOWN TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MORRIS HILLS REGIONAL&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;NEWARK CITY&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;OCEAN CITY&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;PASSAIC VALLEY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;POINT PLEASANT BORO&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;RIVER VALE TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SALEM CO SPECIAL SERVICE&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SOUTH HACKENSACK TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SUSSEX-WANTAGE REGIONAL&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;UPPER TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;WATERFORD TWP&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;WILDWOOD CREST BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ALEXANDRIA TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BEACH HAVEN BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BLOOMSBURY BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BYRAM TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CLEARVIEW REGIONAL&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;DELSEA REGIONAL H.S DIST.&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;EATONTOWN BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;FAIRFIELD TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;GARWOOD BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;HADDONFIELD&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;HENRY HUDSON REGIONAL&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;IRVINGTON TOWNSHIP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;LAUREL SPRINGS BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;LONG BEACH ISLAND&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MAPLE SHADE TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MILLBURN TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MOUNT ARLINGTON BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;NORTH BERGEN TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;OCEAN TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;PEMBERTON TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;PRIDE ACADEMY CHARTER SCHOOL&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;RIVERTON&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SAYREVILLE BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SOUTH PLAINFIELD BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;TEANECK TWP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;VERONA BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;WENONAH BORO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;WINSLOW TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;BARNEGAT TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;BEVERLY CITY&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;BURLINGTON CITY&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CHESTERFIELD TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;DEERFIELD TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;EAST ORANGE&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;ESTELL MANOR CITY&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;FREEHOLD TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;GUTTENBERG TOWN&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;HARRISON TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;HOPEWELL VALLEY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;LACEY TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;LITTLE FERRY BORO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MANCHESTER TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MIDDLESEX BORO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MOORESTOWN TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;NEW MILFORD BORO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;OAKLAND BORO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;PASSAIC CO MANCHESTER REG&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;POHATCONG TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;RIVER DELL REGIONAL&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SADDLE RIVER BORO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SOUTH BOUND BROOK&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SUMMIT CITY&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;UPPER PITTSGROVE TWP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;WATCHUNG BORO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;WHITE TWP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ALPINE BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;BELVIDERE TOWN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;BOUND BROOK BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CAPE MAY CITY&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CLOSTER BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;DOVER TOWN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;EGG HARBOR TWP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;FLORHAM PARK BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;GLEN ROCK BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;HAMMONTON TOWN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;HILLSBOROUGH TWP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;JERSEY CITY&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;LEBANON TWP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;LOWER CAPE MAY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;MAYWOOD BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;MONMOUTH BEACH BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;MOUNTAIN LAKES BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;NORTH PLAINFIELD BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;OLDMANS TWP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;PERTH AMBOY CITY&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;RAMSEY BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ROOSEVELT BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SECAUCUS TOWN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SPRING LAKE BORO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;TOMS RIVER REGIONAL&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;WALL TWP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;WEST MILFORD TWP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;WOODBURY HEIGHTS BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;AUDUBON BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;BERLIN TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;BRIGANTINE CITY&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CENTRAL REGIONAL&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CUMBERLAND CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;EAST GREENWICH TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ENGLEWOOD CLIFFS BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;FREDON TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;GREEN BROOK TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;HARMONY TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;HOPATCONG&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;KINNELON BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;LINWOOD CITY&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MAINLAND REGIONAL&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MERCHANTVILLE BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MONTVALE BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;NETCONG BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;NORTHVALE BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;PARSIPPANY-TROY HILLS TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;PLAINFIELD CITY&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;RIDGEFIELD PARK TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;RUNNEMEDE BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SOMERSET HILLS REGIONAL&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;STONE HARBOR BORO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;UNION TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;WARREN TWP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;WESTWOOD REGIONAL&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;AVALON BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;BERNARDS TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;BROOKLAWN BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CHERRY HILL TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CUMBERLAND REGIONAL&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;EAST HANOVER TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ESSEX CO VOC-TECH&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;FREEHOLD BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;GREEN TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;HARRINGTON PARK BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;HOPE TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;KITTATINNY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;LITTLE EGG HARBOR TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;MANALAPAN-ENGLISHTOWN REG&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;METUCHEN BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;MONTVILLE TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;NEW BRUNSWICK CITY&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;NORWOOD BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;PASCACK VALLEY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;PLEASANTVILLE CITY&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;RIDGEWOOD VILLAGE&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;RUTHERFORD BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SOMERVILLE BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;STOW CREEK TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;UPPER DEERFIELD TWP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;WASHINGTON BORO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;WEYMOUTH TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;BARRINGTON BORO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;BLACK HORSE PIKE REGIONAL&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;BURLINGTON CO SPEC SERV&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CINNAMINSON TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;DELANCO TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;EAST RUTHERFORD BORO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;EVESHAM TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;FRELINGHUYSEN TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;HACKENSACK CITY&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;HASBROUCK HEIGHTS BORO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;HOWELL TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;LAFAYETTE TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;LITTLE SILVER BORO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MANNINGTON TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MIDDLESEX CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MORRIS COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;NEW PROVIDENCE BORO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;OAKLYN BORO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;PASSAIC COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;POINT PLEASANT BEACH&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;RIVER EDGE BORO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SALEM CITY&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SOUTH BRUNSWICK TWP&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SUSSEX COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;UPPER SADDLE RIVER BORO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;WATCHUNG HILLS REGIONAL&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;WILDWOOD CITY&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;BAY HEAD BORO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;BLOOMFIELD TWP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;BURLINGTON TWP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CLARK TWP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;DELAWARE VALLEY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;EASTAMPTON TWP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;FAIR HAVEN BORO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;GALLOWAY TWP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;HADDON HEIGHTS BORO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;HAWTHORNE BORO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;HUNTERDON CENTRAL REG&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;LAKELAND REGIONAL&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;LODI BOROUGH&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MANTUA TWP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MIDLAND PARK BORO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MORRIS PLAINS BORO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;NEWTON TOWN&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;OCEAN COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;PATERSON CITY&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;POMPTON LAKES BORO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;RIVERDALE BORO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SALEM COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SOUTH HARRISON TWP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SWEDESBORO-WOOLWICH&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;VENTNOR CITY&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;WAYNE TWP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;WILLINGBORO TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ATLANTIC CO SPECIAL SERV&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;BERKELEY HEIGHTS TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;BRIDGETON CITY&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CARLSTADT-EAST RUTHERFORD&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CRANBURY TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;EAGLESWOOD TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ELSINBORO TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;FRANKLIN BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;GLOUCESTER TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;HANOVER TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;HOBOKEN CITY&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;KEYPORT BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;LINCOLN PARK BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MADISON BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MENDHAM TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MONTAGUE TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NATIONAL PARK BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NORTHERN HIGHLANDS REG&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;PALMYRA BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;PISCATAWAY TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;RED BANK BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ROXBURY TWP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SOMERDALE BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;STANHOPE BORO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;UNION BEACH&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;WARREN CO SPECIAL SERVICE&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;WESTAMPTON&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;WOODLYNNE BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ANDOVER REG&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;BERGEN CO SPECIAL SERVICE&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;BRADLEY BEACH BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CAPE MAY CO SPECIAL SERV&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;COLLINGSWOOD BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;DOWNE TWP&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ELIZABETH CITY&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;FOLSOM BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;GLOUCESTER CITY&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;HAMPTON BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;HILLSDALE BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;KEANSBURG BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;LENAPE REGIONAL&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;LOWER TWP&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;MEDFORD LAKES BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;MONMOUTH CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;MOUNTAINSIDE BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;NORTH WARREN REGIONAL&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ORADELL BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;PHILLIPSBURG TOWN&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;RANCOCAS VALLEY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ROSELAND BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SHAMONG TWP&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SPRING LAKE HEIGHTS BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;TOTOWA BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;WALLINGTON BORO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;WEST MORRIS REGIONAL&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;WOODCLIFF LAKE BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ALLAMUCHY TWP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;BEDMINSTER TWP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;BOGOTA BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CALDWELL-WEST CALDWELL&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CLEMENTON BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DEMAREST BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;EDGEWATER BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;FAIRVIEW BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;GATEWAY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;HAINESPORT TWP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;HIGH BRIDGE BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ISLAND HEIGHTS BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;LAVALLETTE BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;LONG BRANCH CITY&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MARGATE CITY&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MILLSTONE TWP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MOUNT EPHRAIM BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NORTH BRUNSWICK TWP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;OCEANPORT BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PENNS GRV-CARNEY&apos;S PT REG&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PROSPECT PARK BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ROBBINSVILLE TWP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SCH DIST OF THE CHATHAMS&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SOUTH RIVER BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;TENAFLY BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;VINELAND CITY&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;WEST CAPE MAY BORO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;WOOD-RIDGE BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;AVON BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;BETHLEHEM TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;BUENA REGIONAL&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CHESTER TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;DEAL BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;EAST NEWARK BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;ESSEX FELLS BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;FREEHOLD REGIONAL&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;GREENWICH TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;HARRISON TOWN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;HOPEWELL TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;KNOWLTON TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;LITTLE FALLS TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MANASQUAN BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MIDDLE TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MOONACHIE BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;NEW HANOVER TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;NUTLEY TOWN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;PASSAIC CITY&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;PLUMSTED TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;RINGWOOD BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SADDLE BROOK TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SOUTH AMBOY CITY&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;STRATFORD BORO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;UPPER FREEHOLD REGIONAL&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;WASHINGTON TWP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;WHARTON BORO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;ATLANTIC CO VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;BERKELEY TWP&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;BRIDGEWATER-RARITAN REG&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CARTERET BORO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CRANFORD TWP&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;EAST AMWELL TWP&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;EMERSON BORO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;FRANKLIN LAKES BORO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;GREAT MEADOWS REGIONAL&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;HARDING TOWNSHIP&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;HOLLAND TWP&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;KINGSWAY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;LINDEN CITY&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MAGNOLIA BORO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MERCER CO SPECIAL SERVICE&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MONTCLAIR TOWN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NEPTUNE CITY&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NORTHERN VALLEY REGIONAL&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;PARAMUS BORO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;PITMAN BORO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;RED BANK REGIONAL&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;RUMSON BORO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SOMERS POINT CITY&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;STERLING HIGH SCHOOL DIST&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;UNION CITY&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;WARREN COUNTY VOCATIONAL&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;WESTFIELD TOWN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;WOODSTOWN-PILESGROVE REG&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ALLENDALE BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;BELLEVILLE TOWN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;BOONTON TOWN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CALIFON BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CLIFFSIDE PARK BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;DENNIS TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;EDGEWATER PARK TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;FARMINGDALE BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;GIBBSBORO BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;HALEDON BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;HIGH POINT REGIONAL&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;JACKSON TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;LAWNSIDE BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;LONG HILL TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MARLBORO TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MILLTOWN BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MOUNT HOLLY TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;NORTH CALDWELL BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;OGDENSBURG BORO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;PENNSAUKEN TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;QUINTON TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ROCHELLE PARK TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SCOTCH PLAINS-FANWOOD REG&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SOUTHAMPTON TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;TEWKSBURY TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;VOORHEES TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;WEST DEPTFORD TWP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;WOODBINE BORO&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:County:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;HUDSON&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Morris&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Atlantic&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ATLANTIC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;WARREN&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Burlington&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CAPE MAY&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MONMOUTH&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Passaic&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Cape May&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;HUNTERDON&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CUMBERLAND&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Monmouth&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Hudson&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SUSSEX&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BERGEN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Mercer&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Gloucester&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SALEM&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CAMDEM&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ESSEX&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Essex&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MORRIS&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;OCEAN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Somerset&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SOMERSET&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sussex&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Union&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;UNION&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MERCER&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Ocean&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Camden&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;GLOUCESTER&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bergen&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;BURLINGTON&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;PASSAIC&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Warren&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Cumberland&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MIDDLESEX&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CAMDEN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Middlesex&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0tw0wx21ju081u13eswq101rhr2r].[sum:2012 Total Spend:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:2018 Cost per Pupil:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0tw0wx21ju081u13eswq101rhr2r].[sum:2018 Cost per Pupil:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:2013 avg number pupils:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0tw0wx21ju081u13eswq101rhr2r].[sum:2013 avg number pupils:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0tw0wx21ju081u13eswq101rhr2r].[sum:2014 Cost per Pupil:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.0tw0wx21ju081u13eswq101rhr2r'>
+      <datasources>
+        <datasource caption='NJ_spending_per_pupil' name='federated.0tw0wx21ju081u13eswq101rhr2r' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0tw0wx21ju081u13eswq101rhr2r'>
+        <column aggregation='CountD' datatype='string' name='[Budget Type/Operating Group]' role='dimension' type='nominal' />
+        <column aggregation='None' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+        <column datatype='string' name='[District]' role='dimension' type='nominal' />
+        <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+        <column-instance column='[Budget Type/Operating Group]' derivation='Attribute' name='[attr:Budget Type/Operating Group:nk]' pivot='key' type='nominal' />
+        <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+        <column-instance column='[District]' derivation='None' name='[none:District:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]'>
+        <groupfilter function='level-members' level='[attr:Budget Type/Operating Group:nk]' />
+      </filter>
+      <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]'>
+        <groupfilter function='level-members' level='[none:County:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]'>
+        <groupfilter function='level-members' level='[none:District:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='quantitative' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]' included-values='in-range'>
+        <min>#2012-01-01 00:00:00#</min>
+        <max>#2018-01-01 00:00:00#</max>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Avg Spend per Student line' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Total Spend by County' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Avg Spend per Student' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Scatter' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated)' name='[Action5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Budget Type' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Avg Spend per Student'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Avg Spend / Student by District</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='NJ_spending_per_pupil' name='federated.0tw0wx21ju081u13eswq101rhr2r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tw0wx21ju081u13eswq101rhr2r'>
+            <column aggregation='CountD' datatype='integer' name='[Avg Number Students]' role='measure' type='quantitative' />
+            <column aggregation='CountD' datatype='integer' name='[Avg Spend per Student]' role='measure' type='quantitative' />
+            <column aggregation='CountD' datatype='string' name='[Budget Type/Operating Group]' role='dimension' type='nominal' />
+            <column aggregation='None' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='string' name='[District]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Budget Type/Operating Group]' derivation='Attribute' name='[attr:Budget Type/Operating Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg Number Students]' derivation='Avg' name='[avg:Avg Number Students:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Avg Spend per Student]' derivation='Avg' name='[avg:Avg Spend per Student:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[District]' derivation='None' name='[none:District:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (County)]'>
+            <groupfilter function='level-members' level='[County]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (County)]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Number Students:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#efd7ee</color>
+                <color>#edbeec</color>
+                <color>#eca5e9</color>
+                <color>#ea8ce7</color>
+                <color>#e974e5</color>
+                <color>#e75ce3</color>
+                <color>#e544e0</color>
+                <color>#e42dde</color>
+                <color>#e216dc</color>
+                <color>#e100da</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Number Students:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]</rows>
+        <cols>[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]</cols>
+      </table>
+      <simple-id uuid='{229DE591-DB18-468D-BD8C-6F65068CE605}' />
+    </worksheet>
+    <worksheet name='Avg Spend per Student line'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Avg Spend per Student</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='NJ_spending_per_pupil' name='federated.0tw0wx21ju081u13eswq101rhr2r' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0tw0wx21ju081u13eswq101rhr2r'>
+            <column aggregation='CountD' datatype='integer' name='[Avg Number Students]' role='measure' type='quantitative' />
+            <column aggregation='CountD' datatype='integer' name='[Avg Spend per Student]' role='measure' type='quantitative' />
+            <column aggregation='CountD' datatype='string' name='[Budget Type/Operating Group]' role='dimension' type='nominal' />
+            <column aggregation='None' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='string' name='[District]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Budget Type/Operating Group]' derivation='Attribute' name='[attr:Budget Type/Operating Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg Number Students]' derivation='Avg' name='[avg:Avg Number Students:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Avg Spend per Student]' derivation='Avg' name='[avg:Avg Spend per Student:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[District]' derivation='None' name='[none:District:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (County)]'>
+            <groupfilter function='level-members' level='[County]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (District)]'>
+            <groupfilter function='level-members' level='[District]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (County)]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (District)]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]' scope='cols' value='Year' />
+            <format attr='title' class='0' field='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]' value='Select Year Range'>
+              <formatted-text>
+                <run>Select Year Range</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]' />
+              <lod column='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]' />
+              <tooltip column='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Number Students:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c0c0c0' />
+                <format attr='size' value='0.47176796197891235' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]</rows>
+        <cols>[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{E35444F7-5563-4908-BB47-7F7B81627502}' />
+    </worksheet>
+    <worksheet name='Scatter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='NJ_spending_per_pupil' name='federated.0tw0wx21ju081u13eswq101rhr2r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tw0wx21ju081u13eswq101rhr2r'>
+            <column aggregation='CountD' datatype='integer' name='[Avg Number Students]' role='measure' type='quantitative' />
+            <column aggregation='CountD' datatype='integer' name='[Avg Spend per Student]' role='measure' type='quantitative' />
+            <column aggregation='CountD' datatype='string' name='[Budget Type/Operating Group]' role='dimension' type='nominal' />
+            <column aggregation='None' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='string' name='[District]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Budget Type/Operating Group]' derivation='Attribute' name='[attr:Budget Type/Operating Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg Number Students]' derivation='Avg' name='[avg:Avg Number Students:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Avg Spend per Student]' derivation='Avg' name='[avg:Avg Spend per Student:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[District]' derivation='None' name='[none:District:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (County)]'>
+            <groupfilter function='level-members' level='[County]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (District)]'>
+            <groupfilter function='level-members' level='[District]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (County)]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (District)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]' />
+              <tooltip column='[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#de00e9' />
+                <format attr='mark-transparency' value='139' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]</rows>
+        <cols>[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Number Students:qk]</cols>
+      </table>
+      <simple-id uuid='{B1B60CF8-8BE2-4CAA-ADE7-4D802CC51240}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2925AC9B-D9B7-4724-BB4D-B819DA8067F4}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='NJ_spending_per_pupil' name='federated.0tw0wx21ju081u13eswq101rhr2r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tw0wx21ju081u13eswq101rhr2r'>
+            <column aggregation='CountD' datatype='integer' name='[Avg Number Students]' role='measure' type='quantitative' />
+            <column aggregation='CountD' datatype='string' name='[Budget Type/Operating Group]' role='dimension' type='nominal' />
+            <column aggregation='None' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='string' name='[District]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Budget Type/Operating Group]' derivation='Attribute' name='[attr:Budget Type/Operating Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg Number Students]' derivation='CountD' name='[ctd:Avg Number Students:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[District]' derivation='None' name='[none:District:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0tw0wx21ju081u13eswq101rhr2r].[ctd:Avg Number Students:qk]</rows>
+        <cols>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]</cols>
+      </table>
+      <simple-id uuid='{D89AE25F-11C0-42F4-80B6-26D398641B91}' />
+    </worksheet>
+    <worksheet name='Total Spend by County'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='NJ_spending_per_pupil' name='federated.0tw0wx21ju081u13eswq101rhr2r' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0tw0wx21ju081u13eswq101rhr2r'>
+            <column aggregation='CountD' datatype='integer' name='[Avg Spend per Student]' role='measure' type='quantitative' />
+            <column aggregation='CountD' datatype='string' name='[Budget Type/Operating Group]' role='dimension' type='nominal' />
+            <column aggregation='None' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='string' name='[District]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='integer' name='[Total Spend]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Budget Type/Operating Group]' derivation='Attribute' name='[attr:Budget Type/Operating Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg Spend per Student]' derivation='Avg' name='[avg:Avg Spend per Student:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total Spend]' derivation='Avg' name='[avg:Total Spend:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[District]' derivation='None' name='[none:District:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (District)]'>
+            <groupfilter function='level-members' level='[District]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Total Spend:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[Action (District)]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]</column>
+            <column>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Total Spend:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#eed8f0</color>
+                <color>#ebbfef</color>
+                <color>#e9a6ee</color>
+                <color>#e68eed</color>
+                <color>#e476ec</color>
+                <color>#e15deb</color>
+                <color>#df46ea</color>
+                <color>#dc2ee9</color>
+                <color>#da17e8</color>
+                <color>#d800e7</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]</rows>
+        <cols>[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Total Spend:qk]</cols>
+      </table>
+      <simple-id uuid='{7A9321E8-D80B-4260-8969-B68EFBAA4D43}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style>
+        <style-rule element='dash-title'>
+          <format attr='background-color' value='#e6e6e698' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='background-color' value='#ffffff' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='NJ_spending_per_pupil' name='federated.0tw0wx21ju081u13eswq101rhr2r' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0tw0wx21ju081u13eswq101rhr2r'>
+        <column aggregation='CountD' datatype='string' name='[Budget Type/Operating Group]' role='dimension' type='nominal' />
+        <column aggregation='None' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+        <column datatype='string' name='[District]' role='dimension' type='nominal' />
+        <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+        <column-instance column='[Budget Type/Operating Group]' derivation='Attribute' name='[attr:Budget Type/Operating Group:nk]' pivot='key' type='nominal' />
+        <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+        <column-instance column='[District]' derivation='None' name='[none:District:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='9375' id='31' type='empty' w='95400' x='1100' y='8500'>
+          <zone-style>
+            <format attr='border-color' value='#e6e6e6' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone h='30000' id='3' name='Avg Spend per Student line' w='98000' x='1000' y='57625' />
+        <zone forceUpdate='true' h='6000' id='11' type='text' w='98000' x='1000' y='1375'>
+          <formatted-text>
+            <run bold='true' fontsize='20'>New Jersey School Spend</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#898989' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f5f5f565' />
+          </zone-style>
+        </zone>
+        <zone h='6875' id='20' name='Avg Spend per Student line' pane-specification-id='0' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]' type='color' w='14000' x='6200' y='14875' />
+        <zone h='3125' id='23' mode='checkdropdown' name='Avg Spend per Student line' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:Budget Type:nk]' type='filter' values='database' w='20000' x='49500' y='8750' />
+        <zone h='7625' id='24' name='Avg Spend per Student line' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]' type='filter' values='database' w='16000' x='2000' y='9375' />
+        <zone h='36250' id='25' name='Total Spend by County' w='26200' x='1100' y='20000' />
+        <zone h='36250' id='26' name='Avg Spend per Student' w='31900' x='33000' y='20000' />
+        <zone h='5000' id='27' mode='checkdropdown' name='Avg Spend per Student line' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]' type='filter' values='database' w='20000' x='23000' y='10250' />
+        <zone h='5000' id='28' mode='checkdropdown' name='Avg Spend per Student' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]' type='filter' values='database' w='20000' x='50000' y='10250' />
+        <zone h='34750' id='29' name='Scatter' show-title='false' w='29000' x='67500' y='21875' />
+        <zone h='5000' id='30' mode='checkdropdown' name='Scatter' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]' type='filter' values='database' w='20000' x='75500' y='10250' />
+        <zone forceUpdate='true' h='3625' id='32' type='text' w='55200' x='43400' y='4000'>
+          <formatted-text>
+            <run>Data Source: </run>
+            <run auto-url='true' bold='true' fontcolor='#0000ff' fontname='Benton Sans Book' hyperlink='tabdoc:load-url url=&amp;quot;https://www.nj.gov/cgi-bin/education/csg/15/csg1a.pl?string=%20&amp;amp;maxhits=1000&amp;quot;' underline='true'>https://www.nj.gov/cgi-bin/education/csg/15/csg1a.pl?string=%20&amp;maxhits=1000</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='10000' id='33' type='text' w='98000' x='1000' y='88750'>
+          <formatted-text>
+            <run bold='true'>Created By:</run>
+            <run> Joe Kastner&#10;</run>
+            <run bold='true'>LinkedIn:</run>
+            <run>Æ </run>
+            <run auto-url='true' fontcolor='#0000ff' fontname='Benton Sans Book' hyperlink='tabdoc:load-url url=&amp;quot;https://www.linkedin.com/in/joseph-kastner-8446b446/&amp;quot;' underline='true'>https://www.linkedin.com/in/joseph-kastner-8446b446/</run>
+            <run>Æ&#10;</run>
+            <run bold='true'>Github: </run>
+            <run auto-url='true' fontcolor='#0000ff' fontname='Benton Sans Book' hyperlink='tabdoc:load-url url=&amp;quot;https://github.com/JoeKastner/Brick-NJ-School-Spend-2012-to-2018&amp;quot;' underline='true'>https://github.com/JoeKastner/Brick-NJ-School-Spend-2012-to-2018</run>
+            <run>&#10;Will look to add tax and population data next.. Have recommendations, email me! </run>
+            <run auto-url='true' hyperlink='tabdoc:load-url url=&amp;quot;mailto:kastner318@gmail.com&amp;quot;'>mailto:kastner318@gmail.com</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#898989' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f5f5f5' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1700' minheight='1700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='39' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='38' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='6000' id='11' type='text' w='98000' x='1000' y='1375'>
+                  <formatted-text>
+                    <run bold='true' fontsize='20'>New Jersey School Spend</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#898989' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f565' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3625' id='32' type='text' w='55200' x='43400' y='4000'>
+                  <formatted-text>
+                    <run>Data Source: </run>
+                    <run auto-url='true' bold='true' fontcolor='#0000ff' fontname='Benton Sans Book' hyperlink='tabdoc:load-url url=&amp;quot;https://www.nj.gov/cgi-bin/education/csg/15/csg1a.pl?string=%20&amp;amp;maxhits=1000&amp;quot;' underline='true'>https://www.nj.gov/cgi-bin/education/csg/15/csg1a.pl?string=%20&amp;maxhits=1000</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36250' id='25' is-fixed='true' name='Total Spend by County' w='26200' x='1100' y='20000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5000' id='28' mode='checkdropdown' name='Avg Spend per Student' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:District:nk]' type='filter' values='database' w='20000' x='50000' y='10250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36250' id='26' is-fixed='true' name='Avg Spend per Student' w='31900' x='33000' y='20000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5000' id='30' mode='checkdropdown' name='Scatter' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[attr:Budget Type/Operating Group:nk]' type='filter' values='database' w='20000' x='75500' y='10250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='278' h='34750' id='29' is-fixed='true' name='Scatter' show-title='false' w='29000' x='67500' y='21875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3125' id='23' mode='checkdropdown' name='Avg Spend per Student line' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:Budget Type:nk]' type='filter' values='database' w='20000' x='49500' y='8750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7625' id='24' name='Avg Spend per Student line' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[tyr:Year:qk]' type='filter' values='database' w='16000' x='2000' y='9375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5000' id='27' mode='checkdropdown' name='Avg Spend per Student line' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]' type='filter' values='database' w='20000' x='23000' y='10250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='240' h='30000' id='3' is-fixed='true' name='Avg Spend per Student line' w='98000' x='1000' y='57625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6875' id='20' name='Avg Spend per Student line' pane-specification-id='0' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[none:County:nk]' type='color' w='14000' x='6200' y='14875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='10000' id='33' type='text' w='98000' x='1000' y='88750'>
+                  <formatted-text>
+                    <run bold='true'>Created By:</run>
+                    <run> Joe Kastner&#10;</run>
+                    <run bold='true'>LinkedIn:</run>
+                    <run>Æ </run>
+                    <run auto-url='true' fontcolor='#0000ff' fontname='Benton Sans Book' hyperlink='tabdoc:load-url url=&amp;quot;https://www.linkedin.com/in/joseph-kastner-8446b446/&amp;quot;' underline='true'>https://www.linkedin.com/in/joseph-kastner-8446b446/</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true'>Github: </run>
+                    <run auto-url='true' fontcolor='#0000ff' fontname='Benton Sans Book' hyperlink='tabdoc:load-url url=&amp;quot;https://github.com/JoeKastner/Brick-NJ-School-Spend-2012-to-2018&amp;quot;' underline='true'>https://github.com/JoeKastner/Brick-NJ-School-Spend-2012-to-2018</run>
+                    <run>&#10;Will look to add tax and population data next.. Have recommendations, email me! </run>
+                    <run auto-url='true' hyperlink='tabdoc:load-url url=&amp;quot;mailto:kastner318@gmail.com&amp;quot;'>mailto:kastner318@gmail.com</run>
+                    <run>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#898989' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f5' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5A865124-D0AB-4CAE-B0C6-B2F0FCFCECD7}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Avg Spend per Student line'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B4FED217-E5EB-425B-BBEF-426D58DC3432}' />
+    </window>
+    <window class='worksheet' name='Total Spend by County'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Spend per Student:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1C7D56B3-4BBF-4216-BF3D-3D43A506ACCD}' />
+    </window>
+    <window class='worksheet' name='Avg Spend per Student'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tw0wx21ju081u13eswq101rhr2r].[avg:Avg Number Students:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CEBBFCEA-47CE-4843-9802-B0C63D151EE2}' />
+    </window>
+    <window class='worksheet' name='Scatter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{48E22EB0-9A4D-49F8-B3C1-534296642FA3}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Avg Spend per Student' />
+        <viewpoint name='Avg Spend per Student line' />
+        <viewpoint name='Scatter'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Spend by County' />
+      </viewpoints>
+      <active id='32' />
+      <simple-id uuid='{6EF9B797-1513-4E22-9C11-F0B3FC42C9A3}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2684A768-4FE1-45C6-8E2C-7614171CD893}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{44BEB414-6DFE-4F40-BCE8-AC9B73239E7C}' />
+    </window>
+  </windows>
+</workbook>
